@@ -1,0 +1,8 @@
+FROM nginx:latest
+
+RUN useradd -m -s /bin/bash -u 1000 meidaimae && ¥
+
+    # modify nginx.conf user info
+    sed -i 's/user¥ ¥ nginx¥;/user ¥ ¥ meidaimae¥;/g' /etc/nginx/nginx.conf
+
+WORKDIR /var/www
